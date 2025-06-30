@@ -1,0 +1,24 @@
+.alert.position-fixed {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    margin-top: 1rem;
+}
+
+/* simple slide-down animation */
+@keyframes slideDownAnim {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+
+.slide-down {
+    animation: slideDownAnim 0.5s ease-out forwards;
+}

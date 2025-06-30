@@ -14,3 +14,28 @@
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.2);
    }
+
+.login-back{
+    border-radius: 18px;
+    margin-right: 110px;
+
+}
+
+/* for bubble effect */
+.glow-badge {
+    background: var(--color-2);
+    color: var(--color-white);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-4);
+    backdrop-filter: blur(15px);
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-badge:hover {
+    box-shadow: 0 0 5px #ff1f71, 0 0 15px #ff1f71, 0 0 30px #ff1f71;
+
+

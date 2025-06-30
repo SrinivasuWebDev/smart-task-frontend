@@ -13,4 +13,15 @@ export const deleteTaskById = async (taskId: number) => {
   await api.delete(`/tasks/${taskId}`);
 };
 
+export const fetchTasksDueToday = async (username: string) => {
+  const response = await api.get(`/tasks/due-today/${username}`);
+  return response.data;
+};
+
+export const fetchUpcomingTaskCounts = async (username: string) => {
+  const response = await api.get(`/tasks/upcoming-counts/${username}`);
+  return response.data;
+};
+
+
 export default api;
