@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../api/taskApi";
+import { useNavigate } from "react-router-dom";
+const navigate = useNavigate();
 
 type UserType = {
   id: number;
@@ -89,7 +91,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="container mt-5">
-      {/* <h3 className="mb-4">Admin Dashboard</h3> */}
+      
       
       <div className="d-flex justify-content-between align-items-center mb-4">
   <h3 className="mb-0">Admin: {localStorage.getItem("username")}</h3>
@@ -97,7 +99,7 @@ const AdminDashboard = () => {
     className="btn btn-outline-secondary"
     onClick={() => {
       localStorage.clear();
-      window.location.href = "/login"; // Update this path if needed
+      navigate("/login"); 
     }}
   >
     Logout
@@ -114,7 +116,6 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      {/* New User/Admin Form */}
       <div className="card p-3 mb-4 shadow-sm">
         <h5>Create New User or Admin</h5>
         <form onSubmit={handleCreateUser}>

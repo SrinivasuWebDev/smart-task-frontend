@@ -27,7 +27,7 @@ type Props = {
   tasks: Task[];
 };
 
-const TaskCompletionChart: React.FC<Props> = ({ tasks }) => {
+const TaskCompletionChart = ({ tasks }:Props) => {
   const [data, setData] = useState<ChartData[]>([]);
 
   const getLast7Days = () => {
