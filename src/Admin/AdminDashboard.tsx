@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../api/taskApi";
 import { useNavigate } from "react-router-dom";
-const navigate = useNavigate();
 
 type UserType = {
   id: number;
@@ -26,6 +25,7 @@ const AdminDashboard = () => {
   const [users, setUsers] = useState<UserType[]>([]);
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const [newUser, setNewUser] = useState({
     username: "",
